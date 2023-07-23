@@ -9,19 +9,19 @@ import {
 
 import Users from "./user/pages/Users";
 import NewPlace from "./places/pages/NewPlace";
+import MainNavigation from "./shared/components/Navigation/MainNavigation";
 
 const App = () => {
   return (
     <Router>
+      <main>
+        <MainNavigation />
         <Routes>
           <Route path="/" element={<Users />}></Route>
           <Route path="/place/new" element={<NewPlace />}></Route>
-          <Route path="/" element={<Users />}></Route>
-          <Route path="/" element={<Users />}></Route>
-          <Route path='*' element={<Navigate to="/" replace={true} />} />
+          <Route path="*" element={<Navigate to="/" replace={true} />} />
         </Routes>
-        {/* Navigate is trigger if path is nothing then go back homepage website, Please note: Redirect replace to Naviage after update React-Router v6*/}
-     
+      </main>
     </Router>
   );
 };
