@@ -11,11 +11,12 @@ import Users from "./user/pages/Users";
 import NewPlace from "./places/pages/NewPlace";
 import MainNavigation from "./shared/components/Navigation/MainNavigation";
 
+
 const App = () => {
   return (
     <Router>
+      <MainNavigation />
       <main>
-        <MainNavigation />
         <Routes>
           <Route path="/" element={<Users />}></Route>
           <Route path="/place/new" element={<NewPlace />}></Route>
